@@ -1,0 +1,54 @@
+
+Pour modéliser une base de données pour un site de réservation de places de cinéma avec les spécifications que vous avez mentionnées, voici un exemple de schéma de base de données simple. Cette conception se concentre sur les tables essentielles et les relations entre elles pour gérer les films actuellement à l'affiche, les films à venir, les réservations des utilisateurs, et les bandes annonces pour chaque film.
+
+Tables Principales
+Utilisateurs
+
+UserID (Clé primaire)
+Nom
+Email
+MotDePasse
+DateInscription
+Films
+
+Table Films ajustée:
+
+FilmID (Clé primaire)
+Titre
+Description
+Durée
+DateDeSortie
+Etat (Enum : 'À l'affiche', 'Prochainement')
+URLBandeAnnonce
+NombrePlacesStandard (Nouveau): Ajoutez ici la valeur 20, qui représentera le nombre standard de places disponibles pour chaque séance de ce film.
+
+SeanceID (Clé primaire)
+FilmID (Clé étrangère vers Films)
+DateHeure
+Salle
+NombrePlacesDisponibles
+Réservations
+prix : 12euros
+
+ReservationID (Clé primaire)
+UserID (Clé étrangère vers Utilisateurs)
+SeanceID (Clé étrangère vers Séances)
+NombreDePlaces
+DateHeureReservation
+date_debut
+date_fin
+prix total
+
+
+Relations
+Utilisateurs ⇔ Réservations : Une relation un-à-plusieurs où un utilisateur peut avoir plusieurs réservations, mais chaque réservation appartient à un seul utilisateur.
+Films ⇔ Séances : Une relation un-à-plusieurs où un film peut avoir plusieurs séances, mais chaque séance concerne un seul film.
+Séances ⇔ Réservations : Une relation un-à-plusieurs où une séance peut avoir plusieurs réservations, mais chaque réservation concerne une seule séance.
+Considérations Supplémentaires
+
+
+L'Etat du film (À l'affiche ou Prochainement) peut être géré par un champ dans la table des Films, permettant de filtrer facilement les films selon leur disponibilité.
+La URLBandeAnnonce est stockée dans la table des Films, permettant d'associer chaque film à sa bande-annonce.
+Le NombrePlacesDisponibles dans les Séances doit être mis à jour à chaque nouvelle réservation pour refléter le nombre de places restantes.
+Des mesures de sécurité pour le stockage des MotDePasse doivent être mises en place, comme le hachage des mots de passe.
+Cette conception de base peut être ajustée et étendue en fonction des besoins spécifiques du site, comme ajouter des fonctionnalités de critique de films, des promotions pour les utilisateurs, ou la gestion avancée des salles de cinéma.

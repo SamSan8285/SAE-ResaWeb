@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InstantCiné</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Dune.html">
+    <link rel="icon" href="icon/favicon.ico" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+</head>
+
+<body>
+
+    <header>
+        <a href="#" class="logo">
+            <i class='bx bxs-movie'></i> InstantCiné
+        </a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navbar">
+            <li><a href="#home" class="home-active"> Acceuil </a></li>
+            <li><a href="#movies"> Cinéma </a></li>
+            <li><a href="#coming"> Pochainement </a></li>
+            <li><a href="MentionLegal.html"> Mention Légal </a></li>
+        </ul>
+
+        <link class="search-bar" rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+<form action="">
+  <input type="search" required>
+  <i class="fa fa-search"></i>
+  <a href="javascript:void(0)" id="clear-btn">Clear</a>
+</form>
+
+    </header>
+
+    <section class="home swiper" id="home">
+        <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide container">
+                <img src="Images/home1.jpeg" alt="">
+                <div class="home-text">
+                    <span>iuewfgyfg</span>
+                    <h1>Dune</h1>
+                    <a href="#" class="btn">Séances</a>
+                    <a href="#" class="play"> Bande-annonce
+                        <i class="bx bx-play"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide container">
+                <img src="Images/home2.png" alt="">
+                <div class="home-text">
+                    <span>iuewfgyfg</span>
+                    <h1>Spider-Man: <br> No Way Home </h1>
+                    <a href="#" class="btn">Séances</a>
+                    <a href="#" class="play"> Bande-annonce
+                        <i class="bx bx-play"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide container">
+                <img src="Images/home3.jpeg" alt="">
+                <div class="home-text">
+                    <span>iuewfgyfg</span>
+                    <h1>Black Widow </h1>
+                    <a href="#" class="btn">Séances</a>
+                    <a href="#" class="play"> Bande-annonce
+                        <i class="bx bx-play"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </section>
+
+   <section class=" ">
+        <a class="intro">Bienvenue sur InstantCiné, votre cinéma à Champs-sur-Marne.
+            Notre cinéma vous invite à plonger dans un univers de rêve et d'évasion ! 
+            Réservez vos places en ligne dès maintenant et découvrez les prochains films à l'affiche.
+        </a>
+        
+        <img class="popcorn"  src="Images/popcorn.gif" alt=" gif fd'un homme mangeant du pop corn">
+    
+    </section>
+    
+    <section class="toujours-affiche">
+        <h2>Toujours à l'affiche :</h2>
+    </section>
+    <div class="film-affiche" id="toujours-disponible" >
+        <a href="Dune.html"><img src="Images/m1.jpeg" alt=""></a>
+        <a href=""><img src="Images/m2.jpeg" alt=""></a>
+        <a href=""><img src="Images/m3.jpeg" alt=""></a>
+        <a href=""><img src="Images/m4.jpeg" alt=""></a>
+        <a href=""><img src="Images/m5.jpeg" alt=""></a>
+    </div>
+    
+    <section class="toujours-affiche">
+        <h2>Bientôt à l'affiche :</h2>
+    </section>
+        <div class="film-affiche"  id="bientot-disponible">
+        <a href=""><img src="Images/coming1.jpeg" alt=""></a>
+        <a href=""><img src="Images/coming2.jpeg" alt=""></a>
+        <a href=""><img src="Images/coming3.jpeg" alt=""></a>
+        <a href=""><img src="Images/coming4.jpeg" alt=""></a>
+        <a href=""><img src="Images/coming5.jpeg" alt=""></a>
+    </div>
+
+    <footer>
+        
+        <button onclick="toggleLegal()">Mentions légales</button>
+
+        <p id="legal"> 
+
+            <h3>InstantCiné</h3>
+            
+            <p>
+                Site édité par Victoria Heddad (victoria.heddad@univ-eiffel.fr) dans le cadre de la SAE 2.03.
+                <br>.
+            </p>
+            <p>
+                &copy; Victoria Heddad, 2024.
+            </p>
+
+
+
+        </p>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="main.js"></script>
+
+
+
+</body>
+
+</html>
