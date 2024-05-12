@@ -14,7 +14,10 @@
 }
 
 :root {
+    --neon-white: #fff;
+    --neon-gray: #ccc; /* Un gris clair pour un effet subtil */
     --main-color: #ff2c1f;
+    --neon-red: #c40003;
     --text-color: #020307;
     --bg-color: #fff;
     --sh-color: #1b1c1f;
@@ -33,15 +36,17 @@ section {
   height: 90vh;
 }
 
+
 header {
     /* position: fixed; */
     width: 100%;
     top: 0;
+    height: 5rem;
     right: 0;
     z-index: 1000;
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     padding: 20px 100px;
     transition: 0.5s;
     background-color: rgba(96, 96, 96, 0.269);
@@ -71,7 +76,7 @@ h2 {
 .navbar {
     display: flex;
     column-gap: 5rem;
-    margin-left: 15%;
+    justify-content: space-between;
 }
 
 .navbar li {
@@ -169,6 +174,29 @@ h2 {
 
 }
 
+.voirplus{
+    margin-right: 5%;
+}
+
+.affiche-haut{
+    display: flex;
+    justify-content: space-between;
+}
+
+.affiche-haut .voirplus {
+    padding: 8px 16px; /* Padding autour du texte */
+    background-color: var(--main-color); /* Couleur de fond bleue pour attirer l'attention */
+    color: white; /* Texte blanc pour le contraste */
+    text-decoration: none; /* Suppression du soulignement du lien */
+    font-weight: bold; /* Texte en gras pour souligner l'action */
+    border-radius: 4px; /* Coins arrondis pour un look moderne */
+    transition: background-color 0.3s ease; /* Transition douce pour le survol */
+}
+
+.affiche-haut .voirplus:hover {
+    background-color: var(--neon-red); /* Changement de couleur au survol pour un feedback visuel */
+}
+
 .film-affiche {
     height: auto;
     flex-wrap: wrap;
@@ -215,11 +243,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-.bande-annonce{
-margin-bottom: 17px;
-}
-
-.synopsis{
+#info-titre{
     text-align: center;
 }
 
@@ -238,85 +262,6 @@ margin-bottom: 17px;
 
 /* SearchBar  */
 
-
-form{
-    position: absolute;
-    right: 0;
-    margin-right: 5%;
-    transition: all 1s;
-    width: 50px;
-    height: 50px;
-    background: white;
-    box-sizing: border-box;
-    border-radius: 25px;
-    border: 4px solid white;
-    padding: 5px;
-}
-
-input{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;;
-    height: 42.5px;
-    line-height: 30px;
-    outline: 0;
-    border: 0;
-    display: none;
-    font-size: 1em;
-    border-radius: 20px;
-    padding: 0 20px;
-}
-
-.fa{
-    box-sizing: border-box;
-    padding: 10px;
-    width: 42.5px;
-    height: 42.5px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    border-radius: 50%;
-    color: var(--sh-color);
-    text-align: center;
-    font-size: 1.2em;
-    transition: all 1s;
-}
-
-form:hover,
-form:valid{
-    width: 200px;
-    cursor: pointer;
-}
-
-form:hover input,
-form:valid input{
-    display: block;
-}
-
-form:hover .fa,
-form:valid .fa{
-    background: var(--sh-color);
-    color: white;
-}
-
-
-form > a.search {
-  display: none;
-  position: absolute;
-  top: 70px;
-  bottom:0;
-  left: 0;
-  right: 0;
-  font-size: 20px;
-  color: white;
-  text-align: center;
-  width: 100%;
-}
-
-form:valid a {
-  display: block;
-}
 
 /*  footer  */
 
@@ -394,4 +339,261 @@ footer {
     text-transform: uppercase;
     opacity: .4;
     font-weight: 200;
+}
+
+/* Page info film */
+
+h2.bande-annonce {
+    margin-left: 0%;
+    margin-bottom: 17px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column; /* Change to column for vertical stacking */ /* Center align the children */
+    gap: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.container-info {
+    display: flex;
+    flex-direction: column; /* Keeps  /* Centers the content horizontally */
+    width: 100%; /* Ensures it takes full width within .info */
+}
+.all-info{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.info-left{
+    display: flex;
+    flex-direction: column;
+}
+
+
+#separator{
+    padding-top: 3%;
+}
+
+.separateur-film {
+    position: relative;
+    padding-left: 15px;
+}
+
+.separateur-film::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--neon-white);
+    animation: neon 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon {
+    0%, 100% {
+        box-shadow: 0 0 5px var(--neon-white), 0 0 15px var(--neon-gray);
+    }
+    50% {
+        box-shadow: 0 0 8px var(--neon-gray), 0 0 12px var(--neon-white);
+    }
+}
+
+
+
+#synopsis{
+    display: block;
+    max-width: 500px;
+}
+
+.info-right{
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+}
+#info-btn{
+    align-self: flex-end;
+    margin-top: auto;
+}
+
+/* Popup container styles */
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000; /* High z-index to be on top */
+    
+}
+
+/* Popup content box */
+.popup-content {
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 470px;
+}
+
+/* Popup header with title and close button */
+.popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.popup-header h2 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.close-btn {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.close-btn:hover {
+    color: #666;
+}
+
+/* Input group and label styling */
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 1em;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Adjustments for specific input groups with flex-grow */
+.input-group .flex-75,
+.input-group .flex-25 {
+    flex-basis: 0; /* Don't base size on content size */
+}
+
+.input-group .flex-75 {
+    margin-right: 10px; /* Add some space between the fields */
+}
+
+.input-group .flex-25 {
+    flex-grow: 1; /* Takes up 25% of the space */
+}
+
+/* Input and select field styling */
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group select {
+    padding: 8px 10px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.9em;
+}
+
+/* Submit button styling */
+.submit-btn {
+    width: 100%;
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    margin-top: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: var(--neon-red);
+}   
+
+/* .film-affiche a img:hover {
+    transform: translateY(-10px);
+}  */  
+
+/* style.css */
+
+.search-container {
+    display: flex;
+    justify-content: center;
+}
+
+.search-container input[type="text"] {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.9em;
+}
+
+.special-justify {
+    justify-content: start !important;   /* Exemple: centrage des éléments si peu de films */
+}
+
+/* Style général du formulaire */
+/* Conteneur du formulaire */
+#form-movie-search {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; /* Alignement vertical des éléments */
+    gap: 10px; /* Espacement entre les éléments */
+    padding: 8px;
+    background: #ffffff; /* Fond blanc pour la clarté */
+    border-radius: 8px; /* Coins arrondis doux */
+    max-width: 750px; /* Limite la largeur maximale */
+    margin: 20px 5% 20px auto
+}
+
+/* Inputs de texte et sélections */
+#form-movie-search input[type="text"],
+#form-movie-search select {
+    flex-grow: 1; /* Permet aux champs de remplir l'espace disponible */
+    padding: 8px;
+    border: 2px solid #ced4da;
+    border-radius: 4px;
+    font-size: 16px; /* Taille de texte légèrement plus grande pour la lisibilité */
+}
+
+/* Bouton de recherche */
+#form-movie-search button {
+    padding: 8px 16px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold; /* Texte en gras pour plus de visibilité */
+    
+}
+
+#form-movie-search button:hover {
+    background-color: var(--neon-red);
+    transition: background-color 0.3s ease;
+}   
+
+.search-movies{
+    display: flex;
+    justify-content: space-between;
+
 }

@@ -18,6 +18,8 @@ if ($result = $mysqli->query($query)) {
     $result->close();
 }
 
+
+
 // Utiliser getFilmDetails ou d'autres fonctions ici
 
 // Fermer la connexion après toutes les opérations
@@ -25,12 +27,17 @@ $mysqli->close();
 
 function getFilmDetails($mysqli, $titreFilm) {
     require "conn.php";
-    // Nettoyez le titre du film pour éviter les injections SQL
     $titreFilm = mysqli_real_escape_string($mysqli, $titreFilm);
-    $filmDetails = null;
 
-    // Requête pour obtenir les informations du film
-    $query = "SELECT titre_film, duree, fk_id_genre, synopsis, trailer_url, fk_id_rea FROM film WHERE titre_film = ?";
+    // Requête pour obtenir les informations du film en utilisant l'alias 'f' pour la table 'film'
+    $query = "SELECT f.titre_film, f.duree, GROUP_CONCAT(g.genre SEPARATOR ', ') AS genres, r.nom as realisateur_nom, r.prenom as realisateur_prenom, f.synopsis, f.trailer_url
+              FROM film f
+              JOIN film_genre fg ON f.id = fg.film_id
+              JOIN genre g ON fg.genre_id = g.id
+              JOIN realisateur r ON f.fk_id_rea = r.id
+              WHERE f.titre_film = ?
+              GROUP BY f.id";
+
     if ($stmt = $mysqli->prepare($query)) {
         $stmt->bind_param("s", $titreFilm);
         $stmt->execute();
@@ -44,4 +51,18 @@ function getFilmDetails($mysqli, $titreFilm) {
 
     return $filmDetails;
 }
+
+
+// Convertit une durée en minutes en format H:M pour une meilleur lisibilité
+function convertDurationToHours($minutes) {
+    $hours = floor($minutes / 60);
+    $remainingMinutes = $minutes % 60;
+    $result = "{$hours}h";
+    if ($remainingMinutes > 0) {
+        $result .= "{$remainingMinutes}m";
+    }
+    return $result;
+}
+
+
 ?>

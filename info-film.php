@@ -12,10 +12,9 @@
 require 'conn.php';
 require 'recuperation.php';
 if (isset($_GET['film'])) {
-    $titreFilm = $_GET['film'];
+    $titreFilm = $_GET['film']; 
     // Assurez-vous que $mysqli est toujours ouvert à ce point
     $filmDetails = getFilmDetails($mysqli, $titreFilm);
-
     $trailer_url = $filmDetails['trailer_url'] ?? '';
     $duree = $filmDetails['duree'] ?? 'Non spécifié';
     $fk_id_genre = $filmDetails['fk_id_genre'] ?? 'Non spécifié';
@@ -27,51 +26,93 @@ if (isset($_GET['film'])) {
 
 
 <header>
-    <a href="#" class="logo">
-        <i class='bx bxs-movie'></i> InstantCiné
-    </a>
-    <div class="bx bx-menu" id="menu-icon"></div>
+        <a href="index.php" class="logo">
+            <i class='bx bxs-movie' ></i> InstantCiné
+        </a>
+        <div class="bx bx-menu" id="menu-icon"></div>
 
-    <ul class="navbar">
-        <li><a href="index.html" class="home-active"> Acceuil </a></li>
-        <li><a href="#movies"> Cinéma </a></li>
-        <li><a href="#coming"> Pochainement </a></li>
-        <li> <a href=""> Mention Légal </a></li>
-    </ul>
+        <ul class="navbar">
+            <li><a href="" class="home-active"> Accueil </a></li>
+            <li><a href="#movies"> Cinéma </a></li>
+            <li><a href="#coming"> Prochainement </a></li>
+            <li> <a href=""> Mention Légal </a></li>
+        </ul>
 
+    <form action="recherche.php" method="GET">
+    <div class="search-container">
+        <input type="text" name="recherche" id="search-box" placeholder="Rechercher...">
+    </div>
+</form>
 
-    <link class="search-bar" rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-
-    <form action="">
-        <input type="search" required>
-        <i class="fa fa-search"></i>
-        <a class="search" href="javascript:void(0)" id="clear-btn">Clear</a>
-    </form>
-
-</header>
+    </header>
 
 
 
 <body>
     
     <br>
-
-    <div class="synopsis">
-    <h2 class="bande-annonce">Bande-annonce :</h2>
-    <iframe width="560" height="315" src="<?php echo htmlspecialchars($trailer_url); ?>"
-    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-    allowfullscreen></iframe>
-    <a><?php echo htmlspecialchars($duree); ?> | Genre ID: <?php echo htmlspecialchars($fk_id_genre); ?><br>
-        Par Réalisateur ID: <?php echo htmlspecialchars($fk_id_rea); ?></a>
-
-    <h4>Synopsis & Info</h4>
-    <br>
-    <a><?php echo htmlspecialchars($synopsis); ?></a>
+    <div class="info">
+        <div class="container-info">
+            <h2 class="bande-annonce">Bande-annonce :</h2>
+            <div class="all-info">   
+            <iframe width="560" height="315" src="<?php echo htmlspecialchars($trailer_url); ?>"
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen></iframe>
+            <div class="info-right">
+            <h1 class="bande-annonce separateur-film"><?php echo htmlspecialchars($titreFilm) ?></h1>
+            <a class="separateur-film"><?php echo htmlspecialchars(convertDurationToHours($duree)); ?> | Genre: <?php echo htmlspecialchars($filmDetails['genres']); ?><br>
+            Par le Réalisateur <?php echo htmlspecialchars($filmDetails['realisateur_nom']) . ' ' . htmlspecialchars($filmDetails['realisateur_prenom']); ?></a>
+            <h3 id="separator" class="separateur-film">Synopsis & Info</h3>
+            <a id="synopsis" class="separateur-film"><?php echo htmlspecialchars($synopsis); ?></a>
+            <a id="info-btn" class="btn"> Séances </a>
+        </div>
+        </div> 
+    </div>
 </div>
 
-    
-    <a href="#" class="btn"> Séances </a>
+<!-- Popup Form -->
+<div id="popup-form" class="popup-container" style="display:none;">
+    <div class="popup-content">
+        <div class="popup-header">
+            <h2>Réservez votre séance</h2>
+            <span class="close-btn">&times;</span>
+        </div>
+        <form id="reservation-form" class="popup-form">
+    <div class="input-group">
+        <div class="flex-75">
+            <label for="nom">Nom</label>
+            <input type="text" placeholder="Entrez votre nom" id="nom" name="nom" required>
+        </div>
+        <div class="flex-25">
+            <label for="prenom">Prénom</label>
+            <input type="text" placeholder="Entrez votre prénom" id="prenom" name="prenom" required>
+        </div>
+    </div>
+    <div class="input-group">
+        <div class="flex-75">
+            <label for="email">Email</label>
+            <input type="email" placeholder="Entrez votre email" id="email" name="email" required>
+        </div>
+        <div class="flex-25">
+            <label for="heure">Heure</label>
+            <select id="heure" name="heure">
+                <option value="10:00">10:00</option>
+                <option value="14:00">14:00</option>
+                <option value="18:00">18:00</option>
+                <option value="20:00">20:00</option>
+            </select>
+        </div>
+    </div>
+    <button type="submit" class="submit-btn">Réserver</button>
+</form>
+
+    </div>
+</div>
+
+
+
+
     
 </body>
+<script src="popup.js"></script>
 </html>

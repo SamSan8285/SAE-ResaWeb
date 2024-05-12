@@ -16,27 +16,23 @@
 <body>
 
     <header>
-        <a href="#" class="logo">
-            <i class='bx bxs-movie'></i> InstantCiné
+        <a href="index.php" class="logo">
+            <i class='bx bxs-movie' ></i> InstantCiné
         </a>
         <div class="bx bx-menu" id="menu-icon"></div>
 
         <ul class="navbar">
-            <li><a href="index.html" class="home-active"> Acceuil </a></li>
+            <li><a href="" class="home-active"> Accueil </a></li>
             <li><a href="#movies"> Cinéma </a></li>
-            <li><a href="#coming"> Pochainement </a></li>
+            <li><a href="#coming"> Prochainement </a></li>
             <li> <a href=""> Mention Légal </a></li>
         </ul>
 
-
-        <link class="search-bar" rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-            integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-
-        <form action="">
-            <input type="search" required>
-            <i class="fa fa-search"></i>
-            <a class="search" href="javascript:void(0)" id="clear-btn">Clear</a>
-        </form>
+    <form action="recherche.php" method="GET">
+    <div class="search-container">
+        <input type="text" name="recherche" id="search-box" placeholder="Rechercher...">
+    </div>
+</form>
 
     </header>
 
@@ -44,25 +40,22 @@
         <div class="swiper-wrapper">
             <!-- Slide 1 -->
             <div class="swiper-slide container">
-                <img src="Images/home1.jpeg" alt="">
+                <img src="images/home1.jpeg" alt="">
                 <div class="home-text">
-                    <span>iuewfgyfg</span>
+                    <span>Nos film à l'affiche</span>
                     <h1>Dune</h1>
                     <a href="#" class="btn">Séances</a>
-                    <a href="#" class="play"> Bande-annonce
-                        <i class="bx bx-play"></i>
                     </a>
                 </div>
             </div>
 
             <!-- Slide 2 -->
             <div class="swiper-slide container">
-                <img src="Images/home2.png" alt="">
+                <img src="images/home2.jpeg" alt="">
                 <div class="home-text">
-                    <span>iuewfgyfg</span>
+                    <span>Nos film à l'affiche</span>
                     <h1>Spider-Man: <br> No Way Home </h1>
                     <a href="#" class="btn">Séances</a>
-                    <a href="#" class="play"> Bande-annonce
                         <i class="bx bx-play"></i>
                     </a>
                 </div>
@@ -70,12 +63,11 @@
 
             <!-- Slide 3 -->
             <div class="swiper-slide container">
-                <img src="Images/home3.jpeg" alt="">
+                <img src="images/home3.jpeg" alt="">
                 <div class="home-text">
-                    <span>iuewfgyfg</span>
+                    <span>Nos film à l'affiche</span>
                     <h1>Black Widow </h1>
                     <a href="#" class="btn">Séances</a>
-                    <a href="#" class="play"> Bande-annonce
                         <i class="bx bx-play"></i>
                     </a>
                 </div>
@@ -90,7 +82,7 @@
             Notre cinéma vous invite à plonger dans un univers de rêve et d'évasion !
             Réservez vos places en ligne dès maintenant et découvrez les prochains films à l'affiche.
         </p>
-        <img class="popcorn" src="Images/popcorn.gif" alt=" gif fd'un homme mangeant du pop corn">
+        <img class="popcorn" src="images/popcorn.gif" alt=" gif fd'un homme mangeant du pop corn">
     </section>
 
 
@@ -98,7 +90,10 @@
     require 'recuperation.php';
     ?>
     <section class="toujours-affiche">
-        <h2>Toujours à l'affiche :</h2>
+        <div class="affiche-haut">
+        <h2 id="movies">Toujours à l'affiche :</h2>
+        <a href="recherche.php" class="voirplus">Voir Plus -></a>
+        </div>
         <div class="film-affiche" id="toujours-disponible">
             <!-- PHP pour afficher les films à l'affiche -->
             <?php foreach ($filmsALAffiche as $film): ?>
@@ -111,7 +106,10 @@
     
 
     <section class="toujours-affiche">
-    <h2>Bientôt à l'affiche :</h2>
+    <div class="affiche-haut">
+    <h2 id="coming">Bientôt à l'affiche :</h2>
+    <a href="recherche.php" class="voirplus">Voir Plus -></a>
+    </div>
     <div class="film-affiche" id="bientot-disponible">
         <!-- PHP pour afficher les films bientôt à l'affiche -->
         <?php foreach ($filmsBientot as $film): ?>
@@ -122,9 +120,7 @@
     </div>
 </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <script src="main.js"></script>
+    
 
 <footer>
     <div class="footer-content">
@@ -141,11 +137,13 @@
     </ul>
 </div>
 <div class="footer-bottom">
-    <p>copyright &copy;2024 InstantCiné <span>Victoria Heddad</span> </p>
+    <p>copyright &copy;2024 InstantCiné <span> Tous droits réservés &copy;</span> </p>
 </div>
 
 </footer>
 
 </body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+    <script src="main.js"></script>
 </html>
