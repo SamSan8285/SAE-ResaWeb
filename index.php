@@ -125,13 +125,11 @@
 <footer>
     <div class="footer-content">
      <h3> InstantCiné </h3>
-     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque officiis 
-        tempora debitis enim quia!</p>
+     <p>Pour plus d'informations, retrouvez-nous sur nos sites Youtube, Instagram et X !</p>
         
-    <ul class="socials">
-        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+    <ul class="socials">    
         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
         <li><i href="#" class="fa-brands fa-youtube" style="color: var(color);"></i></a></li>
         <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
     </ul>
