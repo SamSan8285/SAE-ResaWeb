@@ -58,22 +58,67 @@ $mysqli->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Résultats de Recherche</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
 
 <header>
-        <a href="index.php" class="logo">
-            <i class='bx bxs-movie' ></i> InstantCiné
-        </a>
-        <div class="bx bx-menu" id="menu-icon"></div>
+    <a href="index.php" class="logo">
+        <i class='bx bxs-movie'></i> InstantCiné
+    </a>
 
-        <ul class="navbar">
-            <li><a href="" class="home-active"> Accueil </a></li>
-            <li><a href="#movies"> Cinéma </a></li>
-            <li><a href="#coming"> Prochainement </a></li>
-            <li> <a href=""> Mention Légal </a></li>
-        </ul>
+    <ul class="navbar">
+        <li><a href="index.php"> Accueil </a></li>
+        <li><a href="index.php#movies"> Cinéma </a></li>
+        <li><a href="index.php#coming"> Prochainement </a></li>
+        <li><a href="#" id="open-legal"> Mention Légal </a></li>
+    </ul>
+    <form action="recherche.php" id="menu-hamburger" method="GET">
+    <i class="fa-solid fa-bars" id="menu-icon"></i>
+        <div class="search-container">
+            <input type="text" name="recherche" id="search-box" placeholder="Rechercher...">
+        </div>
+    </form>
 </header>
+
+<div id="legal-popup" class="popup-mentions-container" style="display: none;">
+    <div class="popup-mentions-content">
+        <div class="popup-mentions-header">
+            <h2>Mentions Légales</h2>
+            <button id="close-popup" class="popup-mentions-close-btn">&times;</button>
+        </div>
+        <div class="popup-mentions-body">
+            <section>
+                <h3>Crédits Photos</h3>
+                <ul>
+                    <li>Photo du litchi prise ici : <a href="https://www.cultures-sucre.com/parcours-gourmands/le-litchi/">Culture sucre</a> (Définition de la photo compressée pour le site).</li>
+                    <li>Photo du sweatshirt prise ici : <a href="https://www.pinterest.fr/pin/351912460188790/">Pinterest</a> (Définition de la photo compressée pour le site).</li>
+                    <li>Photo du Printemps prise ici : <a href="https://virginiehilssone.com/le-printemps-une-saison-rude-pour-notre-sante/">Photo par Virginnie Hilssone</a> (Définition de la photo compressée pour le site).</li>
+                    <li>Photo du bleu pastel prise ici : <a href="https://fr.freepik.com/vecteurs-libre/aquarelle-texture-fond_1313322.htm#query=bleu%20pastel&position=10&from_view=keyword&track=ais&uuid=0c35a657-cb4f-4e85-a84b-02a0d3b9e856">Freepik</a> (Définition de la photo compressée pour le site).</li>
+                    <li>Photo de la rose rouge prise ici : <a href="https://fr.wikipedia.org/wiki/Baccara_(rose)">Wikipedia</a> (Définition de la photo compressée pour le site).</li>
+                    <li>Photo du loup prise ici : <a href="https://pixabay.com/fr/photos/loup-gris-loup-des-bois-loup-7589920/">Pixabay</a> (Définition de la photo compressée pour le site).</li>
+                    <li>Photo du feu prise ici : <a href="https://www.lenergietoutcompris.fr/actualites-conseils/feu-de-cheminee-comment-eviter-laccident">Lenergietoutcompris</a> (Définition de la photo compressée pour le site).</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Stockage des Données</h3>
+                <p>
+                    Les données entrées lorsque vous créez votre analogie sont enregistrées sur un serveur en France.
+                    Votre mail et votre adresse IP sont également stockés sur le serveur pendant 1 an (toutes les données
+                    seront supprimées l'été prochain). La personne en charge du traitement de ces données est Philipe
+                    GAMBETTE (<a href="mailto:philippe.gambette@univ-eiffel.fr">philippe.gambette@univ-eiffel.fr</a>) pour plus de détails.
+                </p>
+            </section>
+            <section>
+                <h3>Éditeur du Site</h3>
+                <p>
+                    Site édité par Victoria Heddad (<a href="mailto:victoria.heddad@univ-eiffel.fr">victoria.heddad@univ-eiffel.fr</a>) dans le cadre de la SAE 1.05
+                </p>
+                <p>&copy; Victoria Heddad, 2023.</p>
+            </section>
+        </div>
+    </div>
+</div>
 
 <!-- Affichage des films toujours à l'affiche -->
 <form id="form-movie-search" action="recherche.php" method="GET">
@@ -119,4 +164,6 @@ $mysqli->close();
 </section>
 
 </body>
+<script src="hamburger.js"></script>
+<script src="popup-mention.js"></script>
 </html>

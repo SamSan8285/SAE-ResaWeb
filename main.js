@@ -11,6 +11,24 @@ document.addEventListener('DOMContentLoaded', function () {
             clickable: true,
         },
     });
+    navbarLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            // Retirer la classe 'home-active' de tous les liens
+            navbarLinks.forEach(navLink => {
+                navLink.classList.remove('home-active');
+            });
+
+            // Ajouter la classe 'home-active' uniquement sur le lien cliqué
+            if (link.innerText === 'Accueil') {
+                link.classList.add('home-active');
+            }
+
+            // Fermer le menu hamburger
+            navbar.classList.remove('active');
+            document.body.style.overflow = '';
+            closeMenuIcon.style.display = 'none';
+        });
+    });
 
     const searchBox = document.getElementById('search-box');
     const resultsContainer = document.getElementById('results');
