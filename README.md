@@ -1,6 +1,10 @@
 # InstantCiné
 
-Ce projet est un site web pour le cinéma InstantCiné, conçu pour permettre aux utilisateurs de voir les films à l'affiche, réserver des places, et obtenir des informations sur les films à venir. Ce projet a été réalisé avec la collaboration de Gaëlle Charpentier.
+Ce projet est un site web pour le cinéma InstantCiné, conçu pour permettre aux utilisateurs de voir les films à l'affiche, réserver des places, et obtenir des informations sur les films à venir.
+
+
+## URL du site web en ligne
+https://resaweb.heddad.butmmi.o2switch.site/
 
 ## Contenu des fichiers
 
@@ -43,13 +47,14 @@ Nous avons utilisé des icônes pour améliorer l'interface utilisateur. Nous n'
 1. **Installation :**
    - Assurez-vous d'avoir un serveur web et PHP installés.
    - Clonez ce dépôt dans le répertoire de votre serveur web.
-   - Importez la base de données fournie dans votre système de gestion de bases de données.
+   - Importez la base de données fournie (BDD/cinema.sql) dans votre système de gestion de bases de données.
 
 2. **Configuration :**
    - Modifiez les paramètres de connexion à la base de données dans le fichier `conn.php`.
 
 3. **Utilisation :**
-   - Accédez à la page d'accueil via votre navigateur web pour voir les films actuellement à l'affiche.
+   - Accédez à la page d'accueil via l'URL : 
+   'http://localhost/SAE-ResaWeb/index.php' pour voir les films actuellement à l'affiche.
    - Utilisez la barre de recherche pour trouver des films spécifiques.
    - Cliquez sur les films pour voir plus de détails et réserver des places.
 
@@ -66,10 +71,6 @@ Nous avons utilisé des icônes pour améliorer l'interface utilisateur. Nous n'
 - **popup-mention.js** : Gère la fenêtre contextuelle des mentions légales.
 - **hamburger.js** : Gère le menu de navigation mobile.
 
-## Contributions
-
-Contributions et suggestions sont les bienvenues. Veuillez ouvrir une issue pour discuter des modifications proposées.
-
 ---
 
 ### Notes Spéciales
@@ -79,4 +80,4 @@ Contributions et suggestions sont les bienvenues. Veuillez ouvrir une issue pour
 
 ---
 
-Pour toute question ou assistance, n'hésitez pas à contacter les développeurs.
+Pour toute question ou assistance, n'hésitez pas à me contacter.
