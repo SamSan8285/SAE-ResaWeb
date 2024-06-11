@@ -1,9 +1,17 @@
 <?php
-// Paramètres de connexion à la base de données
+// Paramètres de connexion à la base de données en ligne
+// $servername = "localhost";
+// $username = "heddad_victoria";
+// $password = "J2s0Sf9Oqmm0";
+// $dbname = "heddad_cinema";
+
+
+// Paramètres de connexion à la base de données en localhost via XAMPP ou WAMP
 $servername = "localhost";
-$username = "heddad_victoria";
-$password = "J2s0Sf9Oqmm0";
-$dbname = "heddad_cinema";
+$username = "root";
+$password = "";
+$dbname = "cinema";
+
 
 // Création de la connexion
 $mysqli = new mysqli($servername, $username, $password, $dbname);

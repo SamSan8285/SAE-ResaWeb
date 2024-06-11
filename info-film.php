@@ -170,16 +170,16 @@ if (isset($_GET['film'])) {
             <div class="input-group">
                 <div class="flex-75">
                     <label for="nom">Nom</label>
-                    <input type="text" placeholder="Entrez votre nom" id="nom" name="nom" required>
+                    <input type="text" placeholder="Entrez votre nom" id="nom" name="nom" required pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s\-]+" title="Le nom doit contenir uniquement des lettres, des espaces et des tirets.">
                 </div>
                 <div class="flex-25">
                     <label for="prenom">Prénom</label>
-                    <input type="text" placeholder="Entrez votre prénom" id="prenom" name="prenom" required>
+                    <input type="text" placeholder="Entrez votre prénom" id="prenom" name="prenom" required pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s\-]+" title="Le prénom doit contenir uniquement des lettres, des espaces et des tirets.">
                 </div>
             </div>
             <div class="input-group">
                 <div class="flex-75">
-                    <label for="email">Email</label>
+                    <label for="email">Email (sensible a la casse)</label>
                     <input type="email" placeholder="Entrez votre email" id="email" name="email" required>
                 </div>
                 <div class="flex-25">
@@ -192,10 +192,14 @@ if (isset($_GET['film'])) {
                     </select>
                 </div>
             </div>
+            <div class="warning">
+                Attention : Utiliser les boutons de navigation de votre navigateur peut entraîner une perte des informations saisies.
+            </div>
             <button type="submit" class="submit-btn">Réserver</button>
         </form>
     </div>
 </div>
+
 
 <script src="hamburger.js"></script>
 <script src="popup-mention.js"></script>

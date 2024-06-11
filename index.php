@@ -27,7 +27,7 @@ while ($row = $result->fetch_assoc()) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>InstantCiné</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="icon/favicon.ico" />
+    <link rel="icon" href="icon/favicon.ico"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /></head>
 <body>
@@ -214,10 +214,10 @@ while ($row = $result->fetch_assoc()) {
             <h3> InstantCiné </h3>
             <p>Pour plus d'informations, retrouvez-nous sur nos sites Youtube, Instagram et X !</p>
             <ul class="socials">    
-                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-youtube"></i></i></li>
-                <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-youtube" aria-hidden="true"></i></i></li>
+                <li><a href="#"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></i></a></li>
             </ul>
         </div>
         <div class="footer-bottom">

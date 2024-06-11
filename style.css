@@ -134,6 +134,12 @@ i {
     background-color: rgb(2, 3, 7, 0.4);
 }
 
+.warning {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
 .container img {
     position: absolute;
     width: 100%;
@@ -592,6 +598,9 @@ body.modal-open {
 
 .input-group .flex-25 {
     flex-grow: 1;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
 }
 
 .input-group input[type="text"],
