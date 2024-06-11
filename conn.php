@@ -1,9 +1,9 @@
 <?php
 // Paramètres de connexion à la base de données
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "cinema";
+$username = "heddad_victoria";
+$password = "J2s0Sf9Oqmm0";
+$dbname = "heddad_cinema";
 
 // Création de la connexion
 $mysqli = new mysqli($servername, $username, $password, $dbname);
@@ -12,7 +12,7 @@ $mysqli = new mysqli($servername, $username, $password, $dbname);
 if ($mysqli->connect_error) {
     die("Connexion échouée : " . $mysqli->connect_error);
 }
-
+$mysqli->set_charset("utf8mb4");
 // Retournez l'objet mysqli pour une utilisation ultérieure
 return $mysqli;
 ?>

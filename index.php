@@ -60,32 +60,87 @@ while ($row = $result->fetch_assoc()) {
         </div>
         <div class="popup-mentions-body">
             <section>
-                <h3>Crédits Photos</h3>
-                <ul>
-                    <li>Photo du litchi prise ici : <a href="https://www.cultures-sucre.com/parcours-gourmands/le-litchi/">Culture sucre</a> (Définition de la photo compressée pour le site).</li>
-                    <li>Photo du sweatshirt prise ici : <a href="https://www.pinterest.fr/pin/351912460188790/">Pinterest</a> (Définition de la photo compressée pour le site).</li>
-                    <li>Photo du Printemps prise ici : <a href="https://virginiehilssone.com/le-printemps-une-saison-rude-pour-notre-sante/">Photo par Virginnie Hilssone</a> (Définition de la photo compressée pour le site).</li>
-                    <li>Photo du bleu pastel prise ici : <a href="https://fr.freepik.com/vecteurs-libre/aquarelle-texture-fond_1313322.htm#query=bleu%20pastel&position=10&from_view=keyword&track=ais&uuid=0c35a657-cb4f-4e85-a84b-02a0d3b9e856">Freepik</a> (Définition de la photo compressée pour le site).</li>
-                    <li>Photo de la rose rouge prise ici : <a href="https://fr.wikipedia.org/wiki/Baccara_(rose)">Wikipedia</a> (Définition de la photo compressée pour le site).</li>
-                    <li>Photo du loup prise ici : <a href="https://pixabay.com/fr/photos/loup-gris-loup-des-bois-loup-7589920/">Pixabay</a> (Définition de la photo compressée pour le site).</li>
-                    <li>Photo du feu prise ici : <a href="https://www.lenergietoutcompris.fr/actualites-conseils/feu-de-cheminee-comment-eviter-laccident">Lenergietoutcompris</a> (Définition de la photo compressée pour le site).</li>
-                </ul>
-            </section>
-            <section>
-                <h3>Stockage des Données</h3>
+                <h3>Responsable du Site</h3>
                 <p>
-                    Les données entrées lorsque vous créez votre analogie sont enregistrées sur un serveur en France.
-                    Votre mail et votre adresse IP sont également stockés sur le serveur pendant 1 an (toutes les données
-                    seront supprimées l'été prochain). La personne en charge du traitement de ces données est Philipe
-                    GAMBETTE (<a href="mailto:philippe.gambette@univ-eiffel.fr">philippe.gambette@univ-eiffel.fr</a>) pour plus de détails.
+                    Victoria Heddad<br>
+                    Adresse e-mail : <a href="mailto:victoriahedda04@gmail.com">victoriahedda04@gmail.com</a>
                 </p>
             </section>
             <section>
-                <h3>Éditeur du Site</h3>
+                <h3>Hébergeur</h3>
                 <p>
-                    Site édité par Victoria Heddad (<a href="mailto:victoria.heddad@univ-eiffel.fr">victoria.heddad@univ-eiffel.fr</a>) dans le cadre de la SAE 1.05
+                    Nom : o2switch<br>
+                    Adresse : Chemin des Pardiaux, 63000 Clermont-Ferrand, France<br>
+                    Téléphone : 04 44 44 60 40
                 </p>
-                <p>&copy; Victoria Heddad, 2023.</p>
+            </section>
+            <section>
+                <h3>Catégorie d'Images</h3>
+                <p>
+                    Photo Veuve Noire :<br>
+                    <a href="https://www.pinterest.fr/pin/318981586121955742/">Pinterest</a><br>
+                    <a href="https://www.google.com/imgres?imgurl=https://fr.web.img3.acsta.net/r_654_368/newsv7/21/07/30/15/03/4397879.jpg&tbnid=KTeZ-AUjp3QTmM&vet=1&imgrefurl=https://www.allocine.fr/article/fichearticle_gen_carticle%3D18701598.html&docid=ycaknk5AHwY9HM&w=654&h=368&itg=1&hl=fr-FR&source=sh/x/im/m1/4&kgs=aa08626b63e78db6&shem=abme,ssic,trie">AlloCiné</a><br>
+
+                    Photo Spider-Man No Way Home :<br>
+                    <a href="https://www.pinterest.fr/pin/161285230399817940/">Pinterest</a><br>
+                    <a href="https://www.google.com/imgres?imgurl=https://wallpapers.com/images/featured/spiderman-p4ashmgeamn2mvkn.jpg&tbnid=NfdJJYsnnl5oqM&vet=1&imgrefurl=https://wallpapers.com/spiderman&docid=ftqC55grzjSrIM&w=1920&h=1080&itg=1&hl=fr-FR&source=sh/x/im/m1/4&kgs=585983fb91a45961&shem=abme,ssic,trie">Fonds d'écran</a><br>
+
+                    Photos Dunes :<br>
+                    <a href="https://www.pinterest.fr/pin/36099234506348651/">Pinterest</a><br>
+                    <a href="https://www.google.com/imgres?imgurl=https://blog.teufelaudio.fr/wp-content/uploads/2024/02/dune-2-imago415303603-2.jpg&tbnid=75w25ICwLAR0zM&vet=1&imgrefurl=https://blog.teufelaudio.fr/dune-lepopee-du-desert-continue/&docid=wnrx-TyI_hXwHM&w=1500&h=800&hl=fr-FR&source=sh/x/im/m1/4&kgs=82e6299c1f82493e&shem=abme,ssic,trie">Teufel</a><br>
+
+                    Principe de la photo :<br>
+                    <a href="https://www.pinterest.fr/pin/1337074881567351/">Pinterest</a><br>
+                    <a href="https://www.google.com/imgres?imgurl=https://snobinart.fr/wp-content/uploads/2020/08/Tenet-affiche.jpg&tbnid=rYd3k47kzAaZ9M&vet=1&imgrefurl=https://snobinart.fr/culture/critique-cine-tenet-est-il-vraiment-le-chef-doeuvre-annonce/&docid=-CVFX6kSmnWPHM&w=1920&h=1200&hl=fr-FR&source=sh/x/im/m1/4&kgs=3b45147d56f63c53&shem=abme,ssic,trie">Snobinart</a><br>
+
+                    Photo Luca :<br>
+                    <a href="https://www.pinterest.fr/pin/1337074883123456/">Pinterest</a><br>
+                    <a href="https://www.google.com/imgres?imgurl=https://fr.web.img5.acsta.net/newsv7/21/06/23/18/29/1314186.jpg&tbnid=ZZcLsPt5Iba16M&vet=1&imgrefurl=https://www.allocine.fr/diaporamas/cinema/diaporama-18700529/&docid=0BaRNvkV_zhGDM&w=1280&h=720&itg=1&hl=fr-FR&source=sh/x/im/m1/4&kgs=0c5458c32b01412e&shem=abme,ssic,trie">AlloCiné</a><br>
+
+                    Photo Top Gun Maverick :<br>
+                    <a href="https://twitter.com/moviemenfes/status/1772228193963168251">X</a><br>
+                    <a href="https://www.google.com/imgres?imgurl=https://ds.static.rtbf.be/article/image/1920x1080/2/d/0/f5f2b301e7397493b5303c62d0046eb1-1653463265.jpg&tbnid=Lhho0uslc__fEM&vet=1&imgrefurl=https://www.rtbf.be/article/top-gun-maverick-un-pur-divertissement-al-ancienne-terriblement-efficace-a-voir-sur-grand-ecran-10999318&docid=7DZgutwrV5YGMM&w=1920&h=1079&itg=1&hl=fr-FR&source=sh/x/im/m1/4&kgs=388fdcef08f0ff0d&shem=abme,ssic,trie">RTBF</a><br>
+
+                    Photo Le Batman :<br>
+                    <a href="https://www.pinterest.fr/pin/140806232709697/">Pinterest</a><br>
+                    <a href="https://www.google.com/imgres?imgurl=https://www.screentune.com/wp-content/uploads/2022/03/Critique_The_Batman_2022-_ScreenTune.png&tbnid=KCfZoTBFyUYJhM&vet=1&imgrefurl=https://www.screentune.com/critique-the-batman-2022/&docid=xe7dQx2S0FHUbM&w=1920&h=1080&hl=fr-FR&source=sh/x/im/m1/4&kgs=352e29a571d0a1a8&shem=abme,ssic,trie">ScreenTune</a><br>
+
+                    Photo Les minions :<br>
+                    <a href="https://www.pinterest.fr/pin/4925880834006994/">Pinterest</a><br>
+                    <a href="https://images.app.goo.gl/eiJ4EZP6cxGp5dXBA">La une</a><br>
+
+                    Photo Avatar 2 :<br>
+                    <a href="https://www.pinterest.fr/pin/1055599905912530/">Pinterest</a><br>
+                    <a href="https://www.google.com/imgres?imgurl=https://imgsrc.cineserie.com/2016/11/Avatar-2-une-date-de-sortie-sur-pr%25C3%25A9cise.jpg?ver%3D1&tbnid=d79iW4GdOcissM&vet=1&imgrefurl=https://www.cineserie.com/news/cinema/avatar-2-une-date-de-sortie-se-precise-653419/&docid=oGPwA8tXaQPzNM&w=1200&h=632&itg=1&hl=fr-FR&source=sh/x/im/m1/4&kgs=51612c1ad8d55571&shem=abme,ssic,trie">Ciné Série</a><br>
+
+                    Photo des dominations de Jurassic World :<br>
+                    <a href="https://www.pinterest.fr/pin/78179743524720122/">Pinterest</a><br>
+                    <a href="https://www.google.com/imgres?imgurl=https://static.mensup.fr/21/2022/06/photo_article/759036/298830/1200-L-jurassic-world-3-partir-de-quel-ge-les-enfants-peuvent-voir-le-film.jpg&tbnid=uaXjKYGxANra5M&vet=1&imgrefurl=https://www.koolmag.fr/cine/jurassic-world-3--a-partir-de-quel-age-les-enfants-peuvent-voir-le-film--759036&docid=UU_zu3OmQDiQaM&w=1200&h=640&itg=1&hl=fr-FR&source=sh/x/im/m1/4&kgs=267cb29f95ad84c4&shem=abme,ssic,trie">Kool Mag</a><br>
+
+                    Toutes les définitions des photos sont compressées pour le site.
+                </p>
+            </section>
+            <section>
+                <h3>Protection des Données (RGPD)</h3>
+                <p>
+                    Pour toute question ou demande relative à la protection des données, veuillez me contacter à l'adresse suivante : <a href="mailto:victoraheddad@edu.univ-eiffel.fr">victoraheddad@edu.univ-eiffel.fr</a>
+                </p>
+            </section>
+            <section>
+                <h3>Droits d'Auteur</h3>
+                <p>
+                    Tous droits réservés. Aucun contenu du site ne peut être reproduit ou utilisé sans autorisation préalable de Victoria Heddad.
+                </p>
+            </section>
+            <section>
+                <h3>Cookies</h3>
+                <p>Ce site n'utilise pas de Cookies.</p>
+            </section>
+            <section>
+                <h3>Réservations de Places de Cinéma à Champs-sur-Marne</h3>
+                <p>
+                    InstantCiné est un service fictif de réservation de places de cinéma créé dans le cadre de la SAE 2.03. Toutes les réservations ne vous enverront qu'un e-mail de validation.
+                </p>
             </section>
         </div>
     </div>
@@ -93,25 +148,26 @@ while ($row = $result->fetch_assoc()) {
 
 
 
-    <section class="home swiper" id="home">
-        <div class="swiper-wrapper">
-            <?php if (isset($films) && count($films) > 0): ?>
-                <?php foreach ($films as $row): ?>
-                    <div class="swiper-slide container">
-                        <img src="<?php echo htmlspecialchars($row['image_path']); ?>" alt="">
-                        <div class="home-text">
-                            <span>Nos film à l'affiche</span>
-                            <h1><?php echo htmlspecialchars($row['titre_film']); ?></h1>
-                            <a href="info-film.php?film=<?php echo htmlspecialchars($row['titre_film']); ?>" class="btn">Séances</a>
-                        </div>
+<section class="home swiper" id="home">
+    <div class="swiper-wrapper">
+        <?php if (isset($films) && count($films) > 0): ?>
+            <?php foreach ($films as $row): ?>
+                <div class="swiper-slide container">
+                    <img src="<?php echo htmlspecialchars($row['image_slider']); ?>" alt="">
+                    <div class="home-text">
+                        <span>Nos film à l'affiche</span>
+                        <h1><?php echo htmlspecialchars($row['titre_film']); ?></h1>
+                        <a href="info-film.php?film=<?php echo htmlspecialchars($row['titre_film']); ?>" class="btn">Séances</a>
                     </div>
-                <?php endforeach; ?>
-            <?php else: ?>
-                <p>Aucun film trouvé</p>
-            <?php endif; ?>
-        </div>
-        <div class="swiper-pagination"></div>
-    </section>
+                </div>
+            <?php endforeach; ?>
+        <?php else: ?>
+            <p>Aucun film trouvé</p>
+        <?php endif; ?>
+    </div>
+    <div class="swiper-pagination"></div>
+</section>
+
 
     <section id="pop">
         <p class="intro">

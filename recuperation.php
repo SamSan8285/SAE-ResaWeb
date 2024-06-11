@@ -6,7 +6,7 @@ require 'conn.php';
 $filmsALAffiche = [];
 $filmsBientot = [];
 
-$query = "SELECT titre_film, image_path, disponibilite FROM film";
+$query = "SELECT titre_film, image_path, image_slider, disponibilite, synopsis FROM film";
 if ($result = $mysqli->query($query)) {
     while ($row = $result->fetch_assoc()) {
         if ($row['disponibilite'] === "a l'affiche") {
@@ -17,8 +17,6 @@ if ($result = $mysqli->query($query)) {
     }
     $result->close();
 }
-
-
 
 // Utiliser getFilmDetails ou d'autres fonctions ici
 
@@ -52,7 +50,6 @@ function getFilmDetails($mysqli, $titreFilm) {
     return $filmDetails;
 }
 
-
 // Convertit une durée en minutes en format H:M pour une meilleur lisibilité
 function convertDurationToHours($minutes) {
     $hours = floor($minutes / 60);
@@ -63,6 +60,4 @@ function convertDurationToHours($minutes) {
     }
     return $result;
 }
-
-
 ?>
