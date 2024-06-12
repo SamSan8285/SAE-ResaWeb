@@ -8,7 +8,7 @@ use PHPMailer\PHPMailer\Exception;
 require 'vendor/autoload.php'; // Charge automatiquement les fichiers nécessaires
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Récupérer les données du formulaire
+    // Récupére les données du formulaire
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
     $email = $_POST['email'];

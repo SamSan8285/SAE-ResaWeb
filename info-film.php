@@ -4,7 +4,6 @@ require 'recuperation.php';
 
 if (isset($_GET['film'])) {
     $titreFilm = $_GET['film']; 
-    // Assurez-vous que $mysqli est toujours ouvert à ce point
     $filmDetails = getFilmDetails($mysqli, $titreFilm);
     $trailer_url = $filmDetails['trailer_url'] ?? '';
     $duree = $filmDetails['duree'] ?? 'Non spécifié';

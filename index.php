@@ -1,8 +1,8 @@
 <?php
-// Inclus le fichier de connexion
+// Fichier de connexion
 $mysqli = include 'conn.php';
 
-// Vérifixation de l'objet $mysqli  bien défini
+// L'objet $mysqli défini
 if (!$mysqli) {
     die("Erreur lors de la connexion à la base de données.");
 }
