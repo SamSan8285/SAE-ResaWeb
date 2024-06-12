@@ -47,6 +47,7 @@ Nous avons utilisé des icônes pour améliorer l'interface utilisateur. Nous n'
 1. **Installation :**
    - Assurez-vous d'avoir un serveur web et PHP installés.
    - Clonez ce dépôt dans le répertoire de votre serveur web.
+     'https://github.com/SamSan8285/SAE-ResaWeb.git'
    - Importez la base de données fournie (BDD/cinema.sql) dans votre système de gestion de bases de données.
 
 2. **Configuration :**
